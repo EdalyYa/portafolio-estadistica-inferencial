@@ -1,0 +1,36 @@
+<div class="week">
+  <h2 style="font-family:'Caveat',cursive;color:#b91c1c;margin:0 0 8px 0;">Semana 10 · Pruebas para media y proporción</h2>
+  <div class="two-column-layout">
+    <div class="column-left">
+      <div class="box formula">
+        <div class="box-title">Prueba para media</div>
+        <div class="function-sig">Prueba Z para media: \( Z=\tfrac{\bar X-\mu_0}{\sigma/\sqrt{n}} \)</div>
+        <div class="function-sig">Prueba t para media: \( t=\tfrac{\bar X-\mu_0}{S/\sqrt{n}} \)</div>
+        <p>Z: \( Z=\tfrac{\bar X-\mu_0}{\sigma/\sqrt{n}} \).</p>
+        <p>t: \( t=\tfrac{\bar X-\mu_0}{S/\sqrt{n}} \), \(\nu=n-1\).</p>
+        <p>Unilateral: comparar con \(z_{\alpha}\) o \(t_{\alpha}\); bilateral: \(z_{\alpha/2}\), \(t_{\alpha/2}\).</p>
+      </div>
+
+      <div class="box formula">
+        <div class="box-title">Prueba para proporción</div>
+        <div class="function-sig">Prueba Z para proporción: \( Z=\tfrac{\hat p-p_0}{\sqrt{p_0(1-p_0)/n}} \)</div>
+        <p>\( Z=\tfrac{\hat p- p_0}{\sqrt{p_0(1-p_0)/n}} \).</p>
+        <p>Recomendación: verificar que \(np_0\) y \(n(1-p_0)\) sean \(\ge 5\) para aproximación normal fiable.</p>
+      </div>
+    </div>
+    <div class="column-right">
+      <div class="image-fallback" style="background-image:linear-gradient(135deg,#fff,#f8fafc)"></div>
+      <div class="image-caption">Curvas y regiones críticas Z/t.</div>
+      <div class="box example">
+        <div class="box-title">Ejemplo media — t bilateral</div>
+        <p>\(n=22\), \(\bar X=5.2\), \(S=1.1\), \(\mu_0=5\), \(\alpha=0.05\).</p>
+        <p>\(t=\tfrac{0.2}{1.1/\sqrt{22}}\approx 0.86\), \(\nu=21\). No se rechaza \(H_0\).</p>
+      </div>
+      <div class="box example">
+        <div class="box-title">Ejemplo proporción — unilateral</div>
+        <p>\(n=150\), \(\hat p=0.48\), \(p_0=0.45\), \(H_a:p>p_0\).</p>
+        <p>\(Z=\tfrac{0.48-0.45}{\sqrt{0.45\cdot 0.55/150}}\approx 0.82\). No se rechaza a \(\alpha=0.05\).</p>
+      </div>
+    </div>
+  </div>
+</div>

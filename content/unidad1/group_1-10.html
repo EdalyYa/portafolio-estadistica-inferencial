@@ -1,0 +1,47 @@
+<div id="page-1">
+  <h2 style="font-family:'Caveat',cursive;color:#b91c1c;margin:0 0 8px 0;">Unidad I · Fundamentos de Inferencia</h2>
+  <div class="two-column-layout">
+    <div class="column-left">
+      <h3>1) Muestreo y distribuciones</h3>
+      <ul>
+        <li>Población vs muestra. Parámetro vs estadístico.</li>
+        <li>Métodos de muestreo: aleatorio simple, sistemático, estratificado.</li>
+        <li>Distribuciones clave: Normal, t-Student, Chi-cuadrado, F.</li>
+        <li>Teorema del Límite Central y sus implicancias.</li>
+      </ul>
+      <h3>2) Estimación puntual</h3>
+      <ul>
+        <li>Media muestral, proporción muestral, varianza.</li>
+        <li>Sesgo y eficiencia; error estándar.</li>
+      </ul>
+      <div class="image-fallback" style="background-image:linear-gradient(135deg,#fff,#f8fafc),url('')"></div>
+      <div class="image-caption">Diagrama conceptual: poblaciones, muestras y estadísticos.</div>
+    </div>
+    <div class="column-right">
+      <h3>3) Intervalos de confianza</h3>
+      <ul>
+        <li>Para media con σ conocida: \( IC = \bar{x} \pm z_{\alpha/2}\, \tfrac{\sigma}{\sqrt{n}} \)</li>
+        <li>Para media con σ desconocida: usa t-Student (\( n-1 \) gl).</li>
+        <li>Para proporción: \( IC = \hat{p} \pm z_{\alpha/2}\, \sqrt{\tfrac{\hat{p}(1-\hat{p})}{n}} \)</li>
+        <li>Tamaño de muestra para media y proporción.</li>
+      </ul>
+      <h3>4) Buenas prácticas</h3>
+      <ul>
+        <li>Verificar supuestos (normalidad, independencia).</li>
+        <li>Reportar nivel de confianza y método usado.</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<div id="page-2">
+  <h2 style="font-family:'Caveat',cursive;color:#b91c1c;margin:0 0 8px 0;">Unidad I · Ejercicios guiados</h2>
+  <p><strong>Ejemplo:</strong> Para una muestra de tamaño <code>n=36</code> con <code>\bar{x}=52</code> y <code>\sigma=9</code>, calcule el IC del 95% para la media.</p>
+  <ol>
+    <li><code>z_{0.025}=1.96</code></li>
+    <li>Error estándar: <code>9/\sqrt{36}=1.5</code></li>
+    <li>Margen: <code>1.96×1.5=2.94</code></li>
+    <li>IC: <code>52±2.94 ⇒ [49.06, 54.94]</code></li>
+  </ol>
+  <p>Interpretación: Con 95% de confianza, la media poblacional se encuentra en ese intervalo.</p>
+</div>

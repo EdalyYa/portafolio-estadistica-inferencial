@@ -1,0 +1,211 @@
+<div id="page-1" class="week">
+  <h2 style="font-family:'Caveat',cursive;color:#b91c1c;margin:0 0 8px 0;">Semana 1 · Población, muestra y muestreo (I)</h2>
+  <div class="two-column-layout">
+    <div class="column-left">
+      <div class="box definition">
+        <div class="box-title">Definiciones básicas</div>
+        <ul>
+          <li><strong>Población</strong>: conjunto de elementos de interés (personas, empresas, etc.).</li>
+          <li><strong>Muestra</strong>: subconjunto representativo de la población.</li>
+          <li><strong>Parámetro</strong>: valor poblacional \((\mu,\ \sigma,\ p)\).</li>
+          <li><strong>Estadístico</strong>: valor muestral \((\bar X,\ S,\ \hat p)\).</li>
+          <li><strong>Marco muestral</strong>: lista o base que aproxima la población.</li>
+        </ul>
+      </div>
+
+      <div class="box note">
+        <div class="box-title">Objetivo del muestreo</div>
+        <p>Obtener información de calidad con costo y tiempo acotados, controlando sesgos y variabilidad para inferir sobre la población.</p>
+      </div>
+
+      <div class="box formula">
+        <div class="box-title">Error muestral (media)</div>
+        <div class="function-sig">\( \mathrm{SE}(\bar X) = \tfrac{\sigma}{\sqrt{n}} \)</div>
+        <div class="function-sig">\( \mathrm{SE}_F = \tfrac{\sigma}{\sqrt{n}}\, \sqrt{\tfrac{N-n}{N-1}} \) · Corrección finita</div>
+      </div>
+    </div>
+
+    <div class="column-right">
+      <div class="image-fallback" style="background-image:linear-gradient(135deg,#fff,#f8fafc)"></div>
+      <div class="image-caption">Esquema conceptual: población → marco → muestra → estadísticos.</div>
+
+      <div class="box example">
+        <div class="box-title">Ejemplo introductorio</div>
+        <p>Para estimar el gasto medio con \(E=20\) y \(\sigma\approx 200\), IC 95% (\(z=1.96\)):</p>
+        <div class="function-sig">\( n \approx (\tfrac{z\sigma}{E})^2 = (\tfrac{1.96\cdot200}{20})^2 \approx 384.16 \Rightarrow 385 \)</div>
+        <p>Con población finita \(N=10{,}000\): \( n_F = \tfrac{n}{1+n/N} \approx 370 \).</p>
+      </div>
+
+      <div class="box note">
+        <div class="box-title">Buenas prácticas</div>
+        <ul>
+          <li>Definir población objetivo y unidad de análisis.</li>
+          <li>Auditar el marco: cobertura, duplicados, registros obsoletos.</li>
+          <li>Planear estrategias contra la no respuesta.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="page-2" class="week">
+  <h2 style="font-family:'Caveat',cursive;color:#b91c1c;margin:0 0 8px 0;">Semana 1 · Diseños probabilísticos (II)</h2>
+  <div class="two-column-layout">
+    <div class="column-left">
+      <div class="box note">
+        <div class="box-title">Aleatorio simple (MAS)</div>
+        <ul>
+          <li>Todos los elementos tienen probabilidad igual.</li>
+          <li>Selección usual: números aleatorios sobre el marco.</li>
+        </ul>
+      </div>
+      <div class="box note">
+        <div class="box-title">Sistemático</div>
+        <p>Elegir cada \(k\)-ésimo en una lista aleatorizada.</p>
+        <div class="function-sig">\( k = \left\lfloor \tfrac{N}{n} \right\rfloor \)</div>
+      </div>
+      <div class="box note">
+        <div class="box-title">Estratificado</div>
+        <ul>
+          <li>Particionar en estratos homogéneos.</li>
+          <li>Asignación proporcional o óptima (Neyman).</li>
+        </ul>
+      </div>
+      <div class="box note">
+        <div class="box-title">Por conglomerados</div>
+        <ul>
+          <li>Seleccionar grupos naturales (barrios, aulas).</li>
+          <li>Medir todos los elementos del conglomerado o submuestrear.</li>
+        </ul>
+      </div>
+    </div>
+    <div class="column-right">
+      <div class="box formula">
+        <div class="box-title">Tamaño de muestra</div>
+        <div class="function-sig">Media: \( n = \left( \tfrac{z\,\sigma}{E} \right)^2 \)</div>
+        <div class="function-sig">Proporción: \( n = \tfrac{z^2\, \hat p(1-\hat p)}{E^2} \)</div>
+        <div class="function-sig">Corrección finita: \( n_F = \tfrac{n}{1 + n/N} \)</div>
+      </div>
+      <div class="box example">
+        <div class="box-title">Ejemplo</div>
+        <p>Suponiendo \(p\) desconocido, caso peor \(\hat p=0.5\): \( n = \tfrac{(1.96)^2\,0.25}{E^2} \).</p>
+        <p>Si \(E=0.05\): \(n\approx 384\). Con \(N=10{,}000\): \(n_F\approx 370\).</p>
+      </div>
+      <div class="image-fallback" style="min-height:180px"></div>
+      <div class="image-caption">Esquema de asignación en estratos y conglomerados.</div>
+    </div>
+  </div>
+</div>
+
+<div id="page-3" class="week">
+  <h2 style="font-family:'Caveat',cursive;color:#b91c1c;margin:0 0 8px 0;">Semana 1 · Diseños no probabilísticos (III)</h2>
+  <div class="two-column-layout">
+    <div class="column-left">
+      <div class="box definition">
+        <div class="box-title">Tipos comunes</div>
+        <ul>
+          <li><em>Conveniencia</em>: accesibles; alto sesgo.</li>
+          <li><em>Cuotas</em>: se fija distribución deseada; selección no aleatoria.</li>
+          <li><em>Bola de nieve</em>: útil en poblaciones ocultas; dependencias fuertes.</li>
+        </ul>
+      </div>
+      <div class="box note">
+        <div class="box-title">Riesgos</div>
+        <ul>
+          <li>Sesgo de selección y no cobertura.</li>
+          <li>No generalizable; solo exploratorio o para pilotos.</li>
+        </ul>
+      </div>
+    </div>
+    <div class="column-right">
+      <div class="box example">
+        <div class="box-title">Caso práctico</div>
+        <p>Un estudio rápido en campus con conveniencia puede subrepresentar estudiantes nocturnos. Documentar limitaciones y evitar inferencias poblacionales fuertes.</p>
+      </div>
+      <div class="box note">
+        <div class="box-title">Checklist de diseño</div>
+        <ul>
+          <li>Definir variables clave y unidad muestral.</li>
+          <li>Elegir método y justificar supuestos.</li>
+          <li>Plan de campo: contactos, reemplazos, registro de no respuesta.</li>
+          <li>Prueba piloto y ajustes.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="page-4" class="week">
+  <h2 style="font-family:'Caveat',cursive;color:#b91c1c;margin:0 0 8px 0;">Semana 1 · Errores muestrales y no muestrales (IV)</h2>
+  <div class="two-column-layout">
+    <div class="column-left">
+      <div class="box definition">
+        <div class="box-title">Clasificación</div>
+        <ul>
+          <li><strong>Muestrales</strong>: variación por selección aleatoria.</li>
+          <li><strong>No muestrales</strong>: cobertura, medición, procesamiento, no respuesta.</li>
+        </ul>
+      </div>
+      <div class="box formula">
+        <div class="box-title">Error total</div>
+        <div class="function-sig">\( \mathrm{MSE}(\hat\theta) = \mathrm{Var}(\hat\theta) + \text{Sesgo}^2 \)</div>
+        <p>Diseños complejos introducen efecto de diseño \(\mathrm{deff} > 1\) que multiplica la varianza.</p>
+      </div>
+    </div>
+    <div class="column-right">
+      <div class="box example">
+        <div class="box-title">Mitigación</div>
+        <ul>
+          <li>Listas actualizadas y muestreo verdaderamente aleatorio.</li>
+          <li>Capacitación y cuestionarios claros.</li>
+          <li>Pesos y ajustes por no respuesta cuando corresponda.</li>
+        </ul>
+      </div>
+      <div class="image-fallback" style="min-height:160px"></div>
+      <div class="image-caption">Mapa de fuentes de error y acciones correctivas.</div>
+    </div>
+  </div>
+</div>
+
+<div id="page-5" class="week">
+  <h2 style="font-family:'Caveat',cursive;color:#b91c1c;margin:0 0 8px 0;">Semana 1 · Resumen operativo y fórmulas (V)</h2>
+  <div class="two-column-layout">
+    <div class="column-left">
+      <table class="formula-table">
+        <thead><tr><th>Parámetro</th><th>IC 95%</th><th>SE</th></tr></thead>
+        <tbody>
+          <tr>
+            <th>Media (\(\sigma\) conocida)</th>
+            <td class="shade">\( \bar x \pm z\, \tfrac{\sigma}{\sqrt{n}} \)</td>
+            <td>\( \tfrac{\sigma}{\sqrt{n}} \)</td>
+          </tr>
+          <tr>
+            <th>Media (\(\sigma\) desconocida)</th>
+            <td class="shade">\( \bar x \pm t_{n-1}\, \tfrac{s}{\sqrt{n}} \)</td>
+            <td>\( \tfrac{s}{\sqrt{n}} \)</td>
+          </tr>
+          <tr>
+            <th>Proporción</th>
+            <td class="shade">\( \hat p \pm z\, \sqrt{\tfrac{\hat p (1-\hat p)}{n}} \)</td>
+            <td>\( \sqrt{\tfrac{\hat p (1-\hat p)}{n}} \)</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="column-right">
+      <div class="box note">
+        <div class="box-title">Checklist final</div>
+        <ul>
+          <li>Objetivo y variables claras.</li>
+          <li>Marco auditado y método de selección definido.</li>
+          <li>Cálculo de \(n\) con supuestos documentados.</li>
+          <li>Plan de campo y protocolos de calidad.</li>
+        </ul>
+      </div>
+      <div class="box example">
+        <div class="box-title">Mini caso</div>
+        <p>Diseña un MAS para \(N=5{,}000\) estudiantes, \(E=0.04\) sobre proporción de satisfacción. Usa caso peor y corrige por finitud.</p>
+      </div>
+    </div>
+  </div>
+</div>

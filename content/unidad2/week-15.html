@@ -1,0 +1,35 @@
+<div class="week">
+  <h2 style="font-family:'Caveat',cursive;color:#b91c1c;margin:0 0 8px 0;">Semana 15 · Pruebas no paramétricas y cierre</h2>
+  <div class="two-column-layout">
+    <div class="column-left">
+      <div class="box definition">
+        <div class="box-title">¿Cuándo usar no paramétricas?</div>
+        <p>Cuando se violan supuestos de normalidad/homocedasticidad o la variable es ordinal. Ofrecen alternativas robustas.</p>
+      </div>
+      <div class="box formula">
+        <div class="box-title">Wilcoxon apareadas (signed‑rank)</div>
+        <p>Pasos: diferencias \(d_i\), eliminar ceros, ordenar por \(|d_i|\), asignar rangos a signos, estadístico \(W\) (suma rangos positivos). Para \(n>10\), \(Z=\frac{W-\mu_W}{\sigma_W}\) con \(\mu_W=n(n+1)/4\), \(\sigma_W=\sqrt{n(n+1)(2n+1)/24}\).</p>
+      </div>
+      <div class="box formula">
+        <div class="box-title">Mann‑Whitney U (dos independientes)</div>
+        <p>Combinar muestras, ordenar y asignar rangos. \(U_1=n_1n_2+\frac{n_1(n_1+1)}{2}-R_1\), \(U_2=n_1n_2-U_1\). Aproximación normal: \(Z=\frac{U-\mu_U}{\sigma_U}\), \(\mu_U=\frac{n_1n_2}{2}\), \(\sigma_U=\sqrt{\frac{n_1n_2(n_1+n_2+1)}{12}}\).</p>
+      </div>
+      <div class="box formula">
+        <div class="box-title">Kruskal‑Wallis (k grupos)</div>
+        <p>Ranquear todos los datos; \(H=\frac{12}{N(N+1)}\sum_{i=1}^k \frac{R_i^2}{n_i}-3(N+1)\) ~ \(\chi^2\) con gl=\(k-1\) si \(n_i\) suficientemente grandes.</p>
+      </div>
+    </div>
+    <div class="column-right">
+      <div class="image-fallback" style="background-image:linear-gradient(135deg,#fff,#f8fafc)"></div>
+      <div class="image-caption">Resumen visual de alternativas no paramétricas.</div>
+      <div class="box example">
+        <div class="box-title">Ejemplo — Mann‑Whitney</div>
+        <p>\(n_1=8\), \(n_2=7\). Se obtienen rangos con \(R_1=70\). \(U_1=8\cdot7+8\cdot9/2-70=56+36-70=22\). \(\mu_U=28\), \(\sigma_U=\sqrt{8\cdot7\cdot(16)/12}=\sqrt{74.67}=8.64\). \(Z=(22-28)/8.64=-0.69\): no hay evidencia de diferencia (bilateral).</p>
+      </div>
+      <div class="box example">
+        <div class="box-title">Ejemplo — Wilcoxon</div>
+        <p>Con \(n=12\) pares, se calcula \(W=68\). \(\mu_W=12\cdot13/4=39\), \(\sigma_W=\sqrt{12\cdot13\cdot25/24}=\sqrt{162.5}=12.75\). \(Z=(68-39)/12.75\approx 2.27\) ⇒ evidencia de mejora tras el tratamiento (unilateral).</p>
+      </div>
+    </div>
+  </div>
+</div>

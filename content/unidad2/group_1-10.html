@@ -1,0 +1,46 @@
+<div id="page-1">
+  <h2 style="font-family:'Caveat',cursive;color:#b91c1c;margin:0 0 8px 0;">Unidad II · Pruebas y Modelos</h2>
+  <div class="two-column-layout">
+    <div class="column-left">
+      <h3>1) Pruebas de hipótesis</h3>
+      <ul>
+        <li>Planteamiento: <code>H_0</code> vs <code>H_a</code>, nivel <code>\alpha</code>, estadístico.</li>
+        <li>Media (σ conocida / desconocida), proporción.</li>
+        <li>Dos muestras: medias independientes, proporciones; supuestos.</li>
+      </ul>
+      <h3>2) ANOVA de una vía</h3>
+      <ul>
+        <li>Comparación de medias de k grupos; estadístico F.</li>
+        <li>Supuestos: normalidad, homocedasticidad, independencia.</li>
+      </ul>
+    </div>
+    <div class="column-right">
+      <h3>3) Regresión lineal simple</h3>
+      <ul>
+        <li>Modelo: <code>Y = \beta_0 + \beta_1 X + \varepsilon</code></li>
+        <li>Estimación por mínimos cuadrados; interpretación de <code>\beta_1</code>.</li>
+        <li>Bondad de ajuste: <code>R^2</code> y análisis de residuales.</li>
+      </ul>
+      <h3>4) Correlación</h3>
+      <ul>
+        <li>Coeficiente de correlación de Pearson <code>r</code>.</li>
+        <li>Precaución: correlación no implica causalidad.</li>
+      </ul>
+      <div class="image-fallback" style="background-image:linear-gradient(135deg,#fff,#f8fafc)"></div>
+      <div class="image-caption">Esquema de ANOVA y regresión.</div>
+    </div>
+  </div>
+</div>
+
+<div id="page-2">
+  <h2 style="font-family:'Caveat',cursive;color:#b91c1c;margin:0 0 8px 0;">Unidad II · Ejemplo de prueba</h2>
+  <p><strong>Ejemplo:</strong> Se desea probar si la media es 50 (σ=10 conocida), con muestra <code>n=40</code> y <code>\bar{x}=53</code>, a <code>\alpha=0.05</code>.</p>
+  <ol>
+    <li>Hipótesis: <code>H_0: \mu=50</code>, <code>H_a: \mu \ne 50</code>.</li>
+    <li>Estadístico: <code>z = (53-50)/(10/\sqrt{40}) = 1.897</code>.</li>
+    <li>Críticos: <code>±1.96</code>. Como <code>|z| &lt; 1.96</code>, no se rechaza <code>H_0</code>.</li>
+    <li>p-valor ≈ 0.058; conclusión consistente.</li>
+  </ol>
+  <p>Interpretación: No hay evidencia suficiente para concluir que la media difiera de 50.</p>
+</div>
+

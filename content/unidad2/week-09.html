@@ -1,0 +1,31 @@
+<div class="week">
+  <h2 style="font-family:'Caveat',cursive;color:#b91c1c;margin:0 0 8px 0;">Semana 9 · Pruebas de hipótesis (conceptos base)</h2>
+  <div class="two-column-layout">
+    <div class="column-left">
+      <div class="box definition">
+        <div class="box-title">Marco de prueba</div>
+        <ul>
+          <li>Hipótesis: \(H_0\) (afirmación base) vs \(H_a\) (afirmación rival).</li>
+          <li>Significancia \(\alpha\): probabilidad de error tipo I.</li>
+          <li><strong>p‑valor</strong>: probabilidad (bajo \(H_0\)) de un estadístico tan extremo como el observado.</li>
+          <li>Potencia: \(1-\beta\), probabilidad de rechazar \(H_0\) cuando \(H_a\) es verdadera.</li>
+        </ul>
+      </div>
+
+      <div class="box note">
+        <div class="box-title">Procedimiento estándar</div>
+        <div class="function-sig">Marco: \( (H_0,\ H_a,\ \alpha,\ \text{estadístico}) \Rightarrow \text{decisión por p\text{-}valor o región crítica} \)</div>
+        <p>1) Plantear \(H_0/H_a\). 2) Seleccionar estadístico (Z, t, \(\chi^2\), F). 3) Fijar \(\alpha\). 4) Calcular estadístico. 5) Obtener p‑valor o comparar con región crítica. 6) Concluir en términos del problema.</p>
+      </div>
+    </div>
+    <div class="column-right">
+      <div class="image-fallback" style="background-image:linear-gradient(135deg,#fff,#f8fafc)"></div>
+      <div class="image-caption">Diagrama de decisión y regiones críticas.</div>
+      <div class="box example">
+        <div class="box-title">Ejemplo</div>
+        <p>Media con \(\sigma\) conocida, bilateral: \(H_0: \mu=10\) vs \(H_a: \mu\neq 10\). \(n=50\), \(\bar X=10.6\), \(\sigma=2\), \(\alpha=0.05\).</p>
+        <p>\(Z=\tfrac{10.6-10}{2/\sqrt{50}}=2.12\). \(|Z|>1.96\) ⇒ rechazar \(H_0\). Conclusión: evidencia de que \(\mu\neq 10\).</p>
+      </div>
+    </div>
+  </div>
+</div>

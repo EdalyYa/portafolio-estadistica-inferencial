@@ -1,0 +1,79 @@
+<div id="page-1" class="week">
+  <h2 style="font-family:'Caveat',cursive;color:#b91c1c;margin:0 0 8px 0;">Semana 3 · Estimación puntual (I)</h2>
+  <div class="two-column-layout">
+    <div class="column-left">
+      <div class="box definition">
+        <div class="box-title">Estimadores básicos</div>
+        <ul>
+          <li>\(\bar X=\tfrac{1}{n}\sum X_i\) para \(\mu\).</li>
+          <li>\(\hat p=\tfrac{x}{n}\) para \(p\).</li>
+          <li>\(S^2=\tfrac{1}{n-1}\sum (X_i-\bar X)^2\) para \(\sigma^2\).</li>
+        </ul>
+      </div>
+      <div class="box formula">
+        <div class="box-title">Varianzas típicas</div>
+        <div class="function-sig">\( \operatorname{Var}(\bar X)=\tfrac{\sigma^2}{n} \)</div>
+        <div class="function-sig">\( \operatorname{Var}(\hat p)=\tfrac{p(1-p)}{n} \)</div>
+      </div>
+    </div>
+    <div class="column-right">
+      <div class="image-fallback" style="background-image:linear-gradient(135deg,#fff,#f8fafc)"></div>
+      <div class="image-caption">Relación entre estimadores y parámetros.</div>
+    </div>
+  </div>
+</div>
+
+<div id="page-2" class="week">
+  <h2 style="font-family:'Caveat',cursive;color:#b91c1c;margin:0 0 8px 0;">Semana 3 · Propiedades (II)</h2>
+  <div class="two-column-layout">
+    <div class="column-left">
+      <div class="box note">
+        <div class="box-title">Sesgo y eficiencia</div>
+        <ul>
+          <li>Sesgo: \(\mathbb{E}[\hat\theta]-\theta\).</li>
+          <li>Eficiencia: menor varianza en clase de estimadores.</li>
+        </ul>
+        <div class="img-slot small" aria-label="Espacio para imagen del PDF"></div>
+      </div>
+      <div class="box note">
+        <div class="box-title">Consistencia y SE</div>
+        <ul>
+          <li>Consistencia: convergencia en probabilidad a \(\theta\).</li>
+          <li>SE: \(\sqrt{\operatorname{Var}(\hat\theta)}\).</li>
+        </ul>
+        <div class="img-slot small" aria-label="Espacio para imagen del PDF"></div>
+      </div>
+    </div>
+    <div class="column-right">
+      <div class="box example">
+        <div class="box-title">Ejemplo comparativo</div>
+        <p>Estimadores \(A\) (insesgado, varianza 4) y \(B\) (sesgo 0.2, varianza 1). ECM: \(4\) vs \(1.04\). Si el sesgo es tolerable, \(B\) puede preferirse.</p>
+        <div class="img-slot" aria-label="Espacio para imagen del PDF"></div>
+      </div>
+      <div class="image-fallback" style="min-height:160px"></div>
+      <div class="image-caption">Trade‑off entre sesgo y varianza.</div>
+    </div>
+  </div>
+</div>
+
+<div id="page-3" class="week">
+  <h2 style="font-family:'Caveat',cursive;color:#b91c1c;margin:0 0 8px 0;">Semana 3 · Consideraciones prácticas (III)</h2>
+  <div class="two-column-layout">
+    <div class="column-left">
+      <div class="box note">
+        <div class="box-title">Robustez</div>
+        <ul>
+          <li>Outliers inflan varianza y sesgo de \(\bar X\).</li>
+          <li>Usar mediana o estimadores robustos cuando corresponda.</li>
+        </ul>
+      </div>
+    </div>
+    <div class="column-right">
+      <div class="box example">
+        <div class="box-title">Mini caso</div>
+        <p>Comparar \(\bar X\) vs mediana en una muestra sesgada; discutir impacto en inferencia.</p>
+        <div class="img-slot" aria-label="Espacio para imagen del PDF"></div>
+      </div>
+    </div>
+  </div>
+</div>

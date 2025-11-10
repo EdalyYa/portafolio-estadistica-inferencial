@@ -1,0 +1,57 @@
+<div id="page-1" class="week">
+  <h2 style="font-family:'Caveat',cursive;color:#b91c1c;margin:0 0 8px 0;">Semana 5 · IC media (σ desconocida) (I)</h2>
+  <div class="two-column-layout">
+    <div class="column-left">
+      <div class="box formula">
+        <div class="box-title">IC para media con \(\sigma\) desconocida (t)</div>
+        <div class="function-sig">IC media (t): \( \bar X \pm t_{\alpha/2,\,n-1}\,\tfrac{S}{\sqrt{n}} \)</div>
+        <p>\[ IC_{1-\alpha}:\ \ \bar X \pm t_{\alpha/2,\,n-1}\,\frac{S}{\sqrt{n}} \]</p>
+        <p>Supuestos: normalidad aproximada o TLC; grados de libertad \(\nu=n-1\).</p>
+      </div>
+    </div>
+    <div class="column-right">
+      <div class="image-fallback" style="min-height:160px"></div>
+      <div class="image-caption">Cobertura usando t‑Student.</div>
+    </div>
+  </div>
+</div>
+
+<div id="page-2" class="week">
+  <h2 style="font-family:'Caveat',cursive;color:#b91c1c;margin:0 0 8px 0;">Semana 5 · IC para proporción (II)</h2>
+  <div class="two-column-layout">
+    <div class="column-left">
+      <div class="box formula">
+        <div class="box-title">IC para proporción</div>
+        <div class="function-sig">\( \hat p \pm z_{\alpha/2}\,\sqrt{\tfrac{\hat p(1-\hat p)}{n}} \)</div>
+        <p>\[ IC_{1-\alpha}:\ \ \hat p \pm z_{\alpha/2}\,\sqrt{\frac{\hat p(1-\hat p)}{n}} \]</p>
+        <p>Tamaño de muestra: \( n = \tfrac{z_{\alpha/2}^2\,p(1-p)}{E^2} \). Caso peor: \(p=0.5\).</p>
+      </div>
+    </div>
+    <div class="column-right">
+      <div class="image-fallback" style="background-image:linear-gradient(135deg,#fff,#f8fafc)"></div>
+      <div class="image-caption">Visualización de IC de proporciones.</div>
+    </div>
+  </div>
+</div>
+
+<div id="page-3" class="week">
+  <h2 style="font-family:'Caveat',cursive;color:#b91c1c;margin:0 0 8px 0;">Semana 5 · Ejemplos y práctica (III)</h2>
+  <div class="two-column-layout">
+    <div class="column-left">
+      <div class="box example">
+        <div class="box-title">Práctica 1 — Proporciones</div>
+        <p>IC 99% para \(p\) con \(n=120\), \(\hat p=0.38\): \(z_{0.005}=2.576\).</p>
+        <p>\(SE=\sqrt{0.38\cdot 0.62/120}\approx 0.0442\). IC: \(0.38 \pm 2.576\cdot 0.0442\Rightarrow [0.266,\ 0.494]\).</p>
+        <div class="img-slot" aria-label="Espacio para imagen del PDF"></div>
+      </div>
+    </div>
+    <div class="column-right">
+      <div class="box example">
+        <div class="box-title">Práctica 2 — Media (t)</div>
+        <p>Muestra \(n=25\), \(\bar x=102\), \(S=15\). Construir IC 95% para \(\mu\).</p>
+        <p>\(t_{0.025,24}\approx 2.064\). IC: \(102 \pm 2.064\cdot\tfrac{15}{\sqrt{25}}\Rightarrow [95.82,\ 108.18]\).</p>
+        <div class="img-slot" aria-label="Espacio para imagen del PDF"></div>
+      </div>
+    </div>
+  </div>
+</div>

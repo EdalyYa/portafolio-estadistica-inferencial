@@ -1,0 +1,76 @@
+<div id="page-1" class="week">
+  <h2 style="font-family:'Caveat',cursive;color:#b91c1c;margin:0 0 8px 0;">Semana 4 · IC media (σ conocida) (I)</h2>
+  <div class="two-column-layout">
+    <div class="column-left">
+      <div class="box formula">
+        <div class="box-title">IC para la media con \(\sigma\) conocida</div>
+        <div class="function-sig">IC media (Z): \( \bar X \pm z_{\alpha/2}\,\tfrac{\sigma}{\sqrt{n}} \)</div>
+        <p>\[ IC_{1-\alpha}:\ \ \bar X \pm z_{\alpha/2}\,\frac{\sigma}{\sqrt{n}} \]</p>
+        <p>Interpretación: si repitiéramos el muestreo muchas veces, el \((1-\alpha)\) de los intervalos contendrían \(\mu\).</p>
+      </div>
+    </div>
+    <div class="column-right">
+      <div class="image-fallback" style="background-image:linear-gradient(135deg,#fff,#f8fafc)"></div>
+      <div class="image-caption">Gráfico del intervalo alrededor de la media.</div>
+    </div>
+  </div>
+</div>
+
+<div id="page-2" class="week">
+  <h2 style="font-family:'Caveat',cursive;color:#b91c1c;margin:0 0 8px 0;">Semana 4 · Tamaño de muestra (II)</h2>
+  <div class="two-column-layout">
+    <div class="column-left">
+      <div class="box formula">
+        <div class="box-title">Determinación de tamaño de muestra</div>
+        <div class="function-sig">Media: \( n = \left( \tfrac{z_{\alpha/2}\,\sigma}{E} \right)^{2} \)</div>
+        <p>Objetivo de margen de error \(E\): \[ n = \left( \frac{z_{\alpha/2}\,\sigma}{E} \right)^2 \]</p>
+        <p>Corrección por población finita: \( n_F = \tfrac{n}{1 + n/N} \).</p>
+      </div>
+    </div>
+    <div class="column-right">
+      <div class="box example">
+        <div class="box-title">Ejercicio guiado</div>
+        <p>Calcular \(n\) para \(E=2\), \(\sigma=9\), confianza 95%.</p>
+        <p>\(z_{0.025}=1.96\). Entonces \(n=(1.96\cdot 9/2)^2\approx 77.4\Rightarrow n=78\). Si \(N=2{,}000\), ajustar: \(n_F=\tfrac{78}{1+78/2000}\approx 75\).</p>
+        <div class="img-slot" aria-label="Espacio para imagen del PDF"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="page-3" class="week">
+  <h2 style="font-family:'Caveat',cursive;color:#b91c1c;margin:0 0 8px 0;">Semana 4 · Tabla de n (III)</h2>
+  <div class="two-column-layout">
+    <div class="column-left">
+      <div class="box formula">
+        <div class="box-title">Tabla de tamaño de muestra (Media y Proporción)</div>
+        <table class="formula-table">
+          <thead>
+            <tr>
+              <th>Parámetro</th>
+              <th>N conocida</th>
+              <th>N desconocida</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th>Media</th>
+              <td class="shade">\[ n = \frac{Z^{2}\,S^{2}\,N}{N\,e^{2} + Z^{2}\,S^{2}} \]</td>
+              <td>\[ n = \frac{Z^{2}\,S^{2}}{e^{2}} \]</td>
+            </tr>
+            <tr>
+              <th>Proporción</th>
+              <td class="shade">\[ n = \frac{Z^{2}\,p\,q\,N}{N\,e^{2} + Z^{2}\,p\,q} \]</td>
+              <td>\[ n = \frac{Z^{2}\,p\,q}{e^{2}} \]</td>
+            </tr>
+          </tbody>
+        </table>
+        <p style="font-size:0.92em;color:#475569;margin-top:8px;">Convenciones: \(Z\) cuantíl normal estándar; \(S\) desvío muestral (o \(\sigma\) estimada); \(e\) error máximo permitido; \(q=1-p\).</p>
+      </div>
+    </div>
+    <div class="column-right">
+      <div class="image-fallback" style="min-height:160px"></div>
+      <div class="image-caption">Guía rápida para decidir \(n\).</div>
+    </div>
+  </div>
+</div>

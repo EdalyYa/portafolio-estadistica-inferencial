@@ -1,0 +1,38 @@
+<div class="week">
+  <h2 style="font-family:'Caveat',cursive;color:#b91c1c;margin:0 0 8px 0;">Semana 14 · Regresión y correlación</h2>
+  <div class="two-column-layout">
+    <div class="column-left">
+      <div class="box definition">
+        <div class="box-title">Modelo y estimación</div>
+        <p>\(Y=\beta_0+\beta_1 X+\varepsilon\), \(\varepsilon\sim N(0,\sigma^2)\). Estimadores mínimos cuadrados: \(b_1=\frac{S_{xy}}{S_{xx}}\), \(b_0=\bar y-b_1\bar x\).</p>
+      </div>
+      <div class="box formula">
+        <div class="box-title">Inferencia sobre la pendiente</div>
+        <p>Error estándar: \(\text{SE}(b_1)=\sqrt{\text{MSE}/S_{xx}}\), con \(\text{MSE}=\text{SSE}/(n-2)\).</p>
+        <p>Prueba: \( t=\frac{b_1-\beta_{1,0}}{\text{SE}(b_1)}\) con gl=\(n-2\). IC: \( b_1\pm t_{\alpha/2,n-2}\,\text{SE}(b_1) \).</p>
+      </div>
+      <div class="box formula">
+        <div class="box-title">Correlación de Pearson</div>
+        <p>\( r=\frac{S_{xy}}{\sqrt{S_{xx}S_{yy}}} \). Prueba de \(H_0:r=0\): \( t=\frac{r\sqrt{n-2}}{\sqrt{1-r^2}} \) con gl=\(n-2\).</p>
+      </div>
+      <div class="box note">
+        <div class="box-title">Bondad de ajuste y diagnóstico</div>
+        <p>\(R^2=1-\text{SSE}/\text{SST}\). Revisar residuales: patrón aleatorio, varianza constante y normalidad. Considerar transformaciones si se violan supuestos.</p>
+      </div>
+    </div>
+    <div class="column-right">
+      <div class="image-fallback" style="background-image:linear-gradient(135deg,#fff,#f8fafc)"></div>
+      <div class="image-caption">Gráfico dispersión y recta ajustada.</div>
+      <div class="box example">
+        <div class="box-title">Ejemplo — pendiente significativa</div>
+        <p>Resumen: \(n=20\), \(\bar x=10\), \(\bar y=25\), \(S_{xx}=200\), \(S_{xy}=300\), \(\text{SSE}=180\).</p>
+        <p>\(b_1=300/200=1.5\), \(\text{MSE}=180/(20-2)=10\), \(\text{SE}(b_1)=\sqrt{10/200}=0.2236\).</p>
+        <p>Prueba \(H_0:\beta_1=0\): \(t=1.5/0.2236\approx 6.71\), gl=18. Rechazar \(H_0\) (pendiente significativa).</p>
+      </div>
+      <div class="box example">
+        <div class="box-title">Ejemplo — correlación</div>
+        <p>\(S_{yy}=500\) ⇒ \(r=300/\sqrt{200\cdot 500}=300/316.23\approx 0.949\). \(t=0.949\sqrt{18}/\sqrt{1-0.900}\approx 9.0\). Fuerte evidencia de relación lineal.</p>
+      </div>
+    </div>
+  </div>
+</div>

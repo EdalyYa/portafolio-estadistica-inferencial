@@ -1,0 +1,60 @@
+<div id="page-1" class="week">
+  <h2 style="font-family:'Caveat',cursive;color:#b91c1c;margin:0 0 8px 0;">Semana 6 · Medias independientes (I)</h2>
+  <div class="two-column-layout">
+    <div class="column-left">
+      <div class="box formula">
+        <div class="box-title">Medias independientes</div>
+        <div class="function-sig">Pooled: \( (\bar X_1-\bar X_2) \pm t_{\alpha/2,\,n_1+n_2-2}\, S_p\,\sqrt{\tfrac{1}{n_1}+\tfrac{1}{n_2}} \)</div>
+        <p>\(S_p^2=\tfrac{(n_1-1)S_1^2+(n_2-1)S_2^2}{n_1+n_2-2}\).</p>
+        <div class="function-sig">Welch: \( (\bar X_1-\bar X_2) \pm t_{\alpha/2,\,\nu}\,\sqrt{\tfrac{S_1^2}{n_1}+\tfrac{S_2^2}{n_2}} \)</div>
+        <p>\(\nu\) aproximado por Satterthwaite.</p>
+      </div>
+    </div>
+    <div class="column-right">
+      <div class="image-fallback" style="min-height:160px"></div>
+      <div class="image-caption">Comparación pooled vs Welch.</div>
+    </div>
+  </div>
+</div>
+
+<div id="page-2" class="week">
+  <h2 style="font-family:'Caveat',cursive;color:#b91c1c;margin:0 0 8px 0;">Semana 6 · Medias apareadas (II)</h2>
+  <div class="two-column-layout">
+    <div class="column-left">
+      <div class="box formula">
+        <div class="box-title">Medias apareadas</div>
+        <div class="function-sig">\( \bar D \pm t_{\alpha/2,\,n-1}\,\tfrac{S_D}{\sqrt{n}} \)</div>
+        <p>Formar \(D_i=X_{1i}-X_{2i}\). \[ IC: \ \ \bar D \pm t_{\alpha/2,\,n-1}\,\frac{S_D}{\sqrt{n}} \]</p>
+      </div>
+    </div>
+    <div class="column-right">
+      <div class="box example">
+        <div class="box-title">Ejemplo — Welch</div>
+        <p>Grupo A: \(\bar X_1=12.1\), \(S_1=2.0\), \(n_1=30\). Grupo B: \(\bar X_2=11.2\), \(S_2=1.3\), \(n_2=28\). IC 95% para \(\mu_1-\mu_2\).</p>
+        <p>\(SE=\sqrt{2.0^2/30+1.3^2/28}\approx 0.45\). \(t\) con \(\nu\approx 52\): \(1.675\) aprox. IC: \(0.9 \pm 1.675\cdot 0.45\Rightarrow [0.15,\ 1.65]\).</p>
+        <div class="img-slot" aria-label="Espacio para imagen del PDF"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="page-3" class="week">
+  <h2 style="font-family:'Caveat',cursive;color:#b91c1c;margin:0 0 8px 0;">Semana 6 · Diferencia de proporciones (III)</h2>
+  <div class="two-column-layout">
+    <div class="column-left">
+      <div class="box formula">
+        <div class="box-title">Diferencia de proporciones</div>
+        <div class="function-sig">\( (\hat p_1-\hat p_2) \pm z_{\alpha/2}\,\sqrt{\tfrac{\hat p_1(1-\hat p_1)}{n_1}+\tfrac{\hat p_2(1-\hat p_2)}{n_2}} \)</div>
+        <p>\[ IC: \ \ (\hat p_1-\hat p_2) \pm z_{\alpha/2}\,\sqrt{\frac{\hat p_1(1-\hat p_1)}{n_1}+\frac{\hat p_2(1-\hat p_2)}{n_2}} \]</p>
+      </div>
+    </div>
+    <div class="column-right">
+      <div class="box example">
+        <div class="box-title">Ejemplo — Proporciones</div>
+        <p>Campaña A: \(\hat p_1=0.42\), \(n_1=200\); B: \(\hat p_2=0.35\), \(n_2=180\). IC 95% para \(p_1-p_2\).</p>
+        <p>\(SE=\sqrt{0.42\cdot0.58/200+0.35\cdot0.65/180}\approx 0.049\). IC: \(0.07 \pm 1.96\cdot 0.049\Rightarrow [-0.026,\ 0.166]\).</p>
+        <div class="img-slot" aria-label="Espacio para imagen del PDF"></div>
+      </div>
+    </div>
+  </div>
+</div>
